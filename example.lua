@@ -106,7 +106,7 @@ do
 		and
 		ctimeout<maxtimeout -- maxtimeout hasn't been reached
 	do
-		line,err = client:receive() -- if line is set, err is nil, if line is not set, err can be anything
+		line,err = client:receive"*l" -- if line is set, err is nil, if line is not set, err can be anything
 	 
 		irc:process(line)
 	 
